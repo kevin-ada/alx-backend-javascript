@@ -1,8 +1,9 @@
 export default function getFullResponseFromAPI(success) {
-  return Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     if (success === true) {
       resolve({ status: 200, body: 'Success' });
     } else {
+      // eslint-disable-next-line prefer-promise-reject-errors
       reject('The fake API is not working currently');
     }
   });
