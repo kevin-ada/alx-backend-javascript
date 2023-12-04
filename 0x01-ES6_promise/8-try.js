@@ -1,11 +1,11 @@
-export default function divideFunction(numerator, denominator) {
-  return new Promise((resolve, reject) => {
+// eslint-disable-next-line consistent-return
+function divideFunction(numerator, denominator) {
+  try {
     if (denominator === 0) {
-      reject(new Error('cannot divide by 0'));
-    } else {
-      resolve(numerator / denominator);
+      throw new Error('cannot divide by 0');
     }
-  });
+    return numerator / denominator;
+  } catch (e) {
+    console.log(e);
+  }
 }
-
-console.log(divideFunction(10, 2));
