@@ -1,4 +1,3 @@
-// eslint-disable-next-line consistent-return
 export default function divideFunction(numerator, denominator) {
   try {
     if (denominator === 0) {
@@ -9,3 +8,5 @@ export default function divideFunction(numerator, denominator) {
     return e;
   }
 }
+
+console.log(divideFunction(10, 2));
